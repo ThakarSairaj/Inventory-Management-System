@@ -1,0 +1,153 @@
+/* Overall layout */
+.sidenav-container {
+  height: 100%;
+  background-color: #1e1e1e; /* Dark Gray background */
+}
+
+/* Sidebar Styling */
+.sidenav {
+  width: 260px;
+  background-color: #262626; /* Dark Gray Sidebar */
+  color: #e0e0e0; /* Light Silver Text */
+  padding-top: 20px;
+  box-shadow: 2px 0 8px rgba(255, 255, 255, 0.2); /* Silver shadow */
+  transition: width 0.3s ease-in-out;
+}
+
+/* Menu bar */
+.menu-bar {
+  background-color: #2c3e50; /* Dark Blue-Grey */
+  color: #e0e0e0; /* Light Silver Text */
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 2px solid #5f6a6a; /* Silver Border */
+  text-shadow: 0 0 4px rgba(192, 192, 192, 0.5); /* Silver text shadow */
+}
+
+/* Navigation items */
+.mat-nav-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-item {
+  color: #e0e0e0; /* Light Silver Text */
+  font-size: 16px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 8px 16px; /* Added horizontal margin for better spacing */
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.05); /* Subtle silver inner shadow */
+  transition: all 0.3s ease;
+  text-shadow: 0 0 3px rgba(192, 192, 192, 0.3); /* Subtle silver text shadow */
+}
+
+.nav-item:hover {
+  background-color: #2980b9; /* Blue Highlight */
+  transform: translateX(10px);
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.6); /* Enhanced silver shadow on hover */
+}
+
+.nav-item:active {
+  background-color: #1abc9c; /* Green Highlight */
+  transform: translateX(5px);
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Icons and text alignment */
+.nav-icon {
+  margin-right: 12px;
+  font-size: 20px;
+  color: #e0e0e0; /* Consistent silver color */
+}
+
+.nav-text {
+  font-size: 16px;
+  font-weight: 500;
+  flex-grow: 1; /* Ensures proper text spacing */
+}
+
+/* Header (main content area) */
+mat-sidenav-content {
+  background-color: #1e1e1e; /* Consistent dark background */
+  padding: 20px;
+}
+
+mat-toolbar {
+  background-color: #2c3e50; /* Matching dark theme */
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2980b9; /* Blue Text */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 4px rgba(192, 192, 192, 0.5); /* Silver text shadow */
+  margin-left: 15px; /* Proper spacing from menu button */
+}
+
+/* Logout styling */
+.logout-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Pushes logout to the right */
+}
+
+.logout, .logout-text {
+  cursor: pointer;
+  color: #e74c3c; /* Red Text */
+  transition: all 0.3s ease;
+  text-shadow: 0 0 3px rgba(192, 192, 192, 0.3); /* Silver text shadow */
+}
+
+.logout {
+  font-size: 24px; /* Consistent icon size */
+  margin-right: 8px;
+}
+
+.logout-text {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.logout:hover, .logout-text:hover {
+  color: #c0392b; /* Dark Red on Hover */
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.6); /* Enhanced silver shadow */
+}
+
+.hide {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidenav {
+    width: 100%;
+    padding-top: 0; /* Remove extra padding on mobile */
+  }
+
+  .nav-item {
+    justify-content: center; /* Center items on mobile */
+    margin: 8px 0;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .logout-container {
+    margin-right: 10px;
+  }
+}
+
+/* Utility classes */
+.example-spacer {
+  flex: 1 1 auto; /* Proper spacing between elements */
+}

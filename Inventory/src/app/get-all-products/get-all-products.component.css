@@ -1,0 +1,121 @@
+/* Global container styling */
+.table-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+/* Header styling */
+h1 {
+  text-align: center;
+  color: #2980b9; /* Matches previous blue */
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 40px 0 20px;
+  text-shadow: 0 0 4px rgba(192, 192, 192, 0.5); /* Silver text shadow */
+}
+
+hr {
+  width: 20%;
+  margin: 0 auto 40px;
+  border: none;
+  border-top: 2px solid #5f6a6a; /* Matches previous silver border */
+}
+
+/* Table styling */
+#product {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  background-color: #262626; /* Matches sidenav dark gray */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05); /* Subtle silver shadow */
+  font-family: 'Roboto', sans-serif; /* Consistent with previous components */
+}
+
+#product th,
+#product td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #5f6a6a; /* Silver border */
+  color: #e0e0e0; /* Light silver text */
+}
+
+#product th {
+  background-color: #2c3e50; /* Matches menu bar dark blue-grey */
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-shadow: 0 0 3px rgba(192, 192, 192, 0.3); /* Silver text shadow */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#product th:hover {
+  background-color: #34495e; /* Slightly lighter blue-grey */
+}
+
+#product tr:nth-child(even) {
+  background-color: #222222; /* Slightly darker rows */
+}
+
+#product tr:hover {
+  background-color: #2980b9; /* Matches sidenav hover blue */
+  transition: all 0.3s ease;
+}
+
+/* Icons styling */
+.material-icons.white {
+  color: #e0e0e0; /* Light silver */
+  vertical-align: middle;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.material-icons.edit {
+  color: #2980b9; /* Blue to match theme */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.material-icons.delete {
+  color: #e74c3c; /* Red for delete action */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.material-icons.edit:hover {
+  color: #3498db; /* Lighter blue */
+  transform: scale(1.2);
+}
+
+.material-icons.delete:hover {
+  color: #c0392b; /* Darker red */
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 750px) {
+  h1 {
+      font-size: 1.5rem;
+      margin: 30px 0 15px;
+  }
+
+  hr {
+      margin-bottom: 30px;
+  }
+
+  #product {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      margin: 0;
+  }
+
+  #product th,
+  #product td {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+}

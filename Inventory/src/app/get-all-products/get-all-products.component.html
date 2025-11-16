@@ -1,0 +1,48 @@
+<app-main-nav>
+    <h1>All Products</h1>
+    <hr>
+    <div class="table-container">
+        <table id="product">
+            <thead>
+                <tr>
+                    <th (click)="sort('id')">
+                        ID <span class="material-icons white">unfold_more</span>
+                    </th>
+                    <th (click)="sort('productName')">
+                        Product Name <span class="material-icons white">unfold_more</span>
+                    </th>
+                    <th (click)="sort('productDescription')">
+                        Product Description <span class="material-icons white">unfold_more</span>
+                    </th>
+                    <th (click)="sort('Category')">
+                        Category <span class="material-icons white">unfold_more</span>
+                    </th>
+                    <th (click)="sort('units')">
+                        Units <span class="material-icons white">unfold_more</span>
+                    </th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of productList | orderBy: key:reverse">
+                    <td>{{product.productId}}</td>
+                    <td>{{product.productName}}</td>
+                    <td>{{product.productDescription}}</td>
+                    <td>{{product.productCategory}}</td>
+                    <td>{{product.units}}</td>
+                    <td>
+                        <span class="material-icons edit" (click)="updateProduct(product)">
+                            border_color
+                        </span>
+                    </td>
+                    <td>
+                        <span class="material-icons delete" (click)="deleteProduct(product.productId)">
+                            delete
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</app-main-nav>

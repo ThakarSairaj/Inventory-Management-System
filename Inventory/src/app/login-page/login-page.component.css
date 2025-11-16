@@ -1,0 +1,182 @@
+/* Full-page layout */
+.container-fluid {
+  height: 100vh;
+  background-color: #1e1e1e; /* Matches dark theme */
+}
+
+.row.no-gutter {
+  margin: 0;
+  height: 100%;
+}
+
+.row.no-gutter > [class*='col-'] {
+  padding: 0;
+}
+
+/* Left image section */
+.bg-image {
+  background-image: url('../../assets/inventory.webp');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  filter: brightness(0.8); /* Slightly darken image for contrast */
+}
+
+/* Right login section */
+.bg-dark {
+  background-color: #1e1e1e; /* Dark background */
+}
+
+.login {
+  min-height: 100vh;
+  background-color: #262626; /* Matches sidenav dark gray */
+}
+
+/* Form container */
+.col-lg-10.col-xl-7.mx-auto {
+  background-color: #262626;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05); /* Subtle silver shadow */
+  border: 1px solid #5f6a6a; /* Silver border */
+}
+
+/* Typography */
+.display-4 {
+  color: #2980b9; /* Blue accent */
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 0 0 4px rgba(192, 192, 192, 0.5); /* Silver text shadow */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.text-muted {
+  color: #e0e0e0; /* Light silver text */
+  font-size: 1.1rem;
+  text-shadow: 0 0 3px rgba(192, 192, 192, 0.3); /* Subtle silver shadow */
+  text-align: center;
+}
+
+/* Form inputs */
+.form-group {
+  position: relative;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 18px;
+  background-color: #333333; /* Darker input background */
+  border: 1px solid #5f6a6a; /* Silver border */
+  border-radius: 4px;
+  color: #e0e0e0; /* Light silver text */
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #2980b9; /* Blue focus state */
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+  outline: none;
+  background-color: #3a3a3a; /* Slightly lighter on focus */
+}
+
+.form-control::placeholder {
+  color: #a0a0a0; /* Muted silver placeholder */
+}
+
+/* Checkbox */
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+.form-check-input {
+  background-color: #333333;
+  border: 1px solid #5f6a6a;
+  margin-right: 10px;
+}
+
+.form-check-input:checked {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.form-check-label {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  text-shadow: 0 0 3px rgba(192, 192, 192, 0.3);
+}
+
+/* Submit button */
+.btn-primary {
+  background-color: #2980b9; /* Blue accent */
+  color: #e0e0e0; /* Light silver text */
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: 0 0 3px rgba(192, 192, 192, 0.3); /* Silver text shadow */
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #3498db; /* Lighter blue */
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.btn-primary:disabled {
+  background-color: #5f6a6a; /* Silver-gray when disabled */
+  cursor: not-allowed;
+}
+
+/* Messages */
+.messages {
+  text-align: center;
+}
+
+.error-message {
+  display: block;
+  padding: 15px;
+  background-color: #ffebee; /* Light red background */
+  color: #c62828; /* Dark red text */
+  border-radius: 4px;
+  font-size: 0.95rem;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in;
+}
+
+.successMessage {
+  display: block;
+  padding: 15px;
+  background-color: #e8f5e9; /* Light green background */
+  color: #2e7d32; /* Dark green text */
+  border-radius: 4px;
+  font-size: 0.95rem;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bg-image {
+      display: none; /* Hide image on smaller screens */
+  }
+  .bg-dark {
+      width: 100%;
+  }
+  .login {
+      padding: 20px;
+  }
+  .display-4 {
+      font-size: 2rem;
+  }
+}

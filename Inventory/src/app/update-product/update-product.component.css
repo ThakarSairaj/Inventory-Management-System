@@ -1,0 +1,189 @@
+/* Container Styling */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #1e1e1e; /* Dark theme background */
+}
+
+/* Form Styling */
+form {
+  width: 100%;
+  max-width: 600px;
+  background-color: #262626; /* Matches sidenav dark gray */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05); /* Subtle silver shadow */
+  border: 1px solid #5f6a6a; /* Silver border */
+}
+
+/* Header Styling */
+h1 {
+  text-align: center;
+  color: #2980b9; /* Blue accent */
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 40px 0 20px;
+  text-shadow: 0 0 4px rgba(192, 192, 192, 0.5); /* Silver text shadow */
+}
+
+hr {
+  width: 20%;
+  margin: 0 auto 40px;
+  border: none;
+  border-top: 2px solid #5f6a6a; /* Silver divider */
+  background: linear-gradient(to right, transparent, #5f6a6a, transparent);
+}
+
+/* Form Elements */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.col-25 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 15px;
+}
+
+.col-75 {
+  flex: 0 0 75%;
+  max-width: 75%;
+  padding: 0 15px;
+  position: relative;
+}
+
+.offset-25 {
+  margin-left: 25%;
+}
+
+label {
+  color: #e0e0e0; /* Light silver text */
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 0 0 3px rgba(192, 192, 192, 0.3); /* Subtle silver shadow */
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #333333; /* Darker input background */
+  border: 1px solid #5f6a6a; /* Silver border */
+  border-radius: 4px;
+  color: #e0e0e0; /* Light silver text */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #2980b9; /* Blue focus state */
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+  outline: none;
+  background-color: #3a3a3a; /* Slightly lighter on focus */
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+  border-color: #e74c3c; /* Red for invalid fields */
+}
+
+.error-text {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+}
+
+select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23e0e0e0" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.btn-submit {
+  background-color: #2980b9; /* Blue accent */
+  color: #e0e0e0; /* Light silver text */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-shadow: 0 0 3px rgba(192, 192, 192, 0.3); /* Silver text shadow */
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background-color: #3498db; /* Lighter blue */
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.btn-submit:disabled {
+  background-color: #5f6a6a; /* Silver-gray when disabled */
+  cursor: not-allowed;
+}
+
+/* Messages */
+.error-message {
+  display: block;
+  padding: 15px;
+  background-color: #ffebee; /* Light red background */
+  color: #c62828; /* Dark red text */
+  border-radius: 4px;
+  font-size: 0.95rem;
+  margin: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in;
+}
+
+.successMessage {
+  display: block;
+  padding: 15px;
+  background-color: #e8f5e9; /* Light green background */
+  color: #2e7d32; /* Dark green text */
+  border-radius: 4px;
+  font-size: 0.95rem;
+  margin: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .col-25 {
+    margin-bottom: 10px;
+  }
+  .offset-25 {
+    margin-left: 0;
+  }
+}

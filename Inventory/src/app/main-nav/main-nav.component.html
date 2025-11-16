@@ -1,0 +1,49 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    
+    <mat-toolbar class="menu-bar">Menu</mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item class="nav-item" routerLink="/productByCategory">
+        <mat-icon class="nav-icon">category</mat-icon>
+        <span class="nav-text">Get Products by Category</span>
+      </a>
+      
+      <a mat-list-item class="nav-item" routerLink="/getAllProducts">
+        <mat-icon class="nav-icon">visibility</mat-icon>
+        <span class="nav-text">Get All Products</span>
+      </a>
+
+      <a mat-list-item class="nav-item" routerLink="/add">
+        <mat-icon class="nav-icon">add</mat-icon>
+        <span class="nav-text">Add Product</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <span class="title">Inventory</span>
+      <span class="example-spacer"></span>
+      
+      <div class="logout-container">
+        <mat-icon class="logout" routerLink="/login" (click)="logout()">logout</mat-icon>
+        <span class="logout-text hide" routerLink="/login" (click)="logout()"><b>Logout</b></span>
+      </div>
+    </mat-toolbar>
+
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

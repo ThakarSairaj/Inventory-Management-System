@@ -1,0 +1,153 @@
+/* Container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 600px; /* Better form width control */
+  background-color: #262626; /* Matches sidenav dark gray */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05); /* Subtle silver shadow */
+}
+
+/* Header styling */
+h1 {
+  text-align: center;
+  color: #2980b9; /* Matches previous blue */
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 40px 0 20px;
+  text-shadow: 0 0 4px rgba(192, 192, 192, 0.5); /* Silver text shadow */
+}
+
+hr {
+  width: 20%;
+  margin: 0 auto 40px;
+  border: none;
+  border-top: 2px solid #5f6a6a; /* Matches previous silver border */
+}
+
+/* Form elements */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.col-25 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 15px;
+}
+
+.col-75 {
+  flex: 0 0 75%;
+  max-width: 75%;
+  padding: 0 15px;
+}
+
+label {
+  color: #e0e0e0; /* Light silver text */
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 0 0 3px rgba(192, 192, 192, 0.3); /* Subtle silver shadow */
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #333333; /* Darker input background */
+  border: 1px solid #5f6a6a; /* Silver border */
+  border-radius: 4px;
+  color: #e0e0e0; /* Light silver text */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #2980b9; /* Blue focus state */
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+  outline: none;
+}
+
+select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23e0e0e0" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+input[type="submit"] {
+  background-color: #2980b9; /* Matches sidenav blue */
+  color: #e0e0e0; /* Light silver text */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  text-shadow: 0 0 3px rgba(192, 192, 192, 0.3); /* Silver text shadow */
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #3498db; /* Lighter blue */
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.6);
+}
+
+/* Messages */
+.error-message {
+  display: block;
+  padding: 15px;
+  background-color: #ffebee; /* Light red background */
+  color: #c62828; /* Dark red text */
+  border-radius: 4px;
+  font-size: 0.95rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.successMessage {
+  display: block;
+  padding: 15px;
+  background-color: #e8f5e9; /* Light green background */
+  color: #2e7d32; /* Dark green text */
+  border-radius: 4px;
+  font-size: 0.95rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0 10px;
+  }
+
+  .col-25 {
+      margin-bottom: 10px;
+  }
+
+  form {
+      padding: 20px;
+  }
+}

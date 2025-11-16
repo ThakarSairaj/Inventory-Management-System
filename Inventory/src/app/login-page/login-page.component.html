@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <!-- Left image section -->
+        <div class="col-md-6 d-none d-md-flex bg-image"></div>
+
+        <!-- Right login section -->
+        <div class="col-md-6 bg-dark">
+            <div class="login d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+                            <h3 class="display-4">Login</h3>
+                            <p class="text-muted mb-4">Inventory Management System</p>
+                            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                                <div class="form-group mb-4">
+                                    <input 
+                                        id="inputEmail" 
+                                        type="email" 
+                                        placeholder="Email Address" 
+                                        required 
+                                        autofocus 
+                                        class="form-control" 
+                                        formControlName="emailid"
+                                    >
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input 
+                                        id="inputPassword" 
+                                        type="password" 
+                                        placeholder="Password" 
+                                        required 
+                                        class="form-control" 
+                                        formControlName="password"
+                                    >
+                                </div>
+                                <div class="form-check mb-4">
+                                    <input 
+                                        id="customCheck1" 
+                                        type="checkbox" 
+                                        class="form-check-input" 
+                                        checked
+                                    >
+                                    <label for="customCheck1" class="form-check-label">Remember password</label>
+                                </div>
+                                <button 
+                                    id="submit" 
+                                    type="submit" 
+                                    class="btn btn-primary btn-block"
+                                    [disabled]="loginForm.invalid"
+                                >
+                                    Sign In
+                                </button>
+                            </form>
+                            <div class="messages mt-4">
+                                <label class="error-message" *ngIf="errMessage">{{ errMessage }}</label>
+                                <label class="successMessage" *ngIf="successMessage">{{ successMessage }}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
